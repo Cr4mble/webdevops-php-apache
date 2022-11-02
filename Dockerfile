@@ -17,7 +17,7 @@ RUN add-apt-repository ppa:ondrej/apache2
 RUN set -x \
     # Install apache
     && apt-install \
-        apache2 \
+        apache2=2.4.54-1+ubuntu18.04.1+deb.sury.org+1 \
     && sed -ri ' \
         s!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g; \
         s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
